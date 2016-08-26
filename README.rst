@@ -2,8 +2,8 @@ Minha Caixa
 ===========
 
 .. image:: images/MinhaCaixa.jpg
-   :height: 100px
-   :width: 200 px
+   :height: 50px
+   :width: 100 px
    :scale: 50 %
    :alt: alternate text
    :align: right
