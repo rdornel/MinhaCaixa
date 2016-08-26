@@ -2,8 +2,11 @@ Minha Caixa
 ===========
 
 .. image:: images/MinhaCaixa.jpg
-   :scale: 10 %
-   :alt: map to buried treasure
+   :height: 100px
+   :width: 200 px
+   :scale: 50 %
+   :alt: alternate text
+   :align: right
 
 Projeto destinado ao ensino aprendizagem de banco de dados
 
