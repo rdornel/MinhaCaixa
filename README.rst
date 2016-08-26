@@ -1,7 +1,7 @@
 Minha Caixa 
 ===========
 
-.. image:: images/minhacaixa.jpeg
+.. image:: images/MinhaCaixa.jpg
    :scale: 30 %
    :alt: map to buried treasure
 
