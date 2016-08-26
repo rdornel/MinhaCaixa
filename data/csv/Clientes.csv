@@ -1,4 +1,4 @@
-CPF;Nome;Sobrenome;Sexo;Nascimento;EstadoCivil;Rua;Número;Bairro;CEP;Cidade;Estado;Pais;RendaAnual;Telefone;Email
+ClienteCPF;ClienteNome;ClienteSobrenome;ClienteSexo;ClienteNascimento;ClienteEstadoCivil;ClienteRua;ClienteNumero;ClienteBairro;ClienteCEP;ClienteCidade;ClienteEstado;ClientePais;ClienteRendaAnual;ClienteTelefone;ClienteEmail
 277.674.372-50;Jon;Yang;M;1980-11-13 00:00:00.000;S;RUA DO PRINCIPE;330;CENTRO;89223140;JOINVILLE;SC;BRASIL;90000;1 (11) 500 555-0162;jon24@adventure-works.com
 882.659.990-64;Eugene;Huang;M;1980-02-19 00:00:00.000;C;PARANA;313;ANITA GARIBALDI;89223251;JOINVILLE;SC;BRASIL;60000;1 (11) 500 555-0110;eugene10@adventure-works.com
 284.764.650-53;Ruben;Torres;M;1981-02-23 00:00:00.000;S;HELENA DEGELMANN;524;COSTA E SILVA;89227017;JOINVILLE;SC;BRASIL;60000;1 (11) 500 555-0184;ruben35@adventure-works.com
