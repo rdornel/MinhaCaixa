@@ -1,16 +1,13 @@
-/*
-Assuntos: Create database, tidos de dados, inserção, update e delete
-*/
 SET DATEFORMAT YMD
 GO
 USE master
 go
-IF EXISTS (SELECT * FROM SYS.databases WHERE NAME = 'MinhaCaixa2')
-drop database MinhaCaixa2
+IF EXISTS (SELECT * FROM SYS.databases WHERE NAME = 'MinhaCaixa')
+drop database MinhaCaixa
 go
-CREATE DATABASE MinhaCaixa2
+CREATE DATABASE MinhaCaixa
 GO
-USE MinhaCaixa2
+USE MinhaCaixa
 GO
 CREATE TABLE Grupo
 (
@@ -32,8 +29,8 @@ VALUES  (
         )
 CREATE TABLE Filial
 (
-FilialCodigo INT IDENTITY(1,1) CONSTRAINT PK_Filial PRIMARY KEY,
 GrupoCodigo INT,
+FilialCodigo INT IDENTITY(1,1) CONSTRAINT PK_Filial PRIMARY KEY,
 FilialNome VARCHAR(50),
 FilialRazaoSocial VARCHAR(50),
 FilialCNPJ varchar(20),
@@ -75,3 +72,41 @@ ClienteRendaAnual MONEY,
 ClienteTelefone VARCHAR(50),
 ClienteEmail VARCHAR(80)
 ) 
+GO
+CREATE TABLE Agencias
+(
+GrupoCodigo INT,
+FilialCodigo INT,
+AgenciaCodigo INT IDENTITY CONSTRAINT PK_Agencias PRIMARY KEY,
+AgenciaNome VARCHAR (50),
+AgenciaRua varchar(1000),
+AgenciaNumero INT,
+AgenciaBairro VARCHAR(50),
+AgenciaCEP VARCHAR(25),
+AgenciaCidade VARCHAR(50),
+AgenciaEstado CHAR(2),
+AgenciaPais VARCHAR(50)
+)
+GO
+CREATE TABLE Contas
+(
+FilialCodigo INT,
+GrupoCodigo INT,
+AgenciaCodigo int,
+ContaNumero VARCHAR (10) CONSTRAINT PK_CONTA PRIMARY KEY,
+ClienteCodigo int,
+ContaSaldo MONEY,
+ContaAbertura datetime
+)
+CREATE TABLE Movimentos
+(
+FilialCodigo INT,
+GrupoCodigo INT,
+AgenciaCodigo int,
+ContaNumero VARCHAR (10) CONSTRAINT PK_CONTA PRIMARY KEY,
+ClienteCodigo int,
+CodigoMovimento int,
+MovimentoData datetime
+MovimentoValor MONEY,
+MovimentoTipo int
+)
