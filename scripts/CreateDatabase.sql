@@ -54,7 +54,7 @@ VALUES  (1,
 GO
 CREATE table Clientes
 (
-ClienteCodigo int IDENTITY CONSTRAINT PK_CLIENTES PRIMARY KEY,
+ClienteCodigo int CONSTRAINT PK_CLIENTES PRIMARY KEY,
 ClienteCPF varchar (50),
 ClienteNome varchar (50),
 ClienteSobrenome varchar (50),
@@ -93,7 +93,7 @@ CREATE TABLE Contas
 FilialCodigo INT,
 GrupoCodigo INT,
 AgenciaCodigo int,
-ContaNumero VARCHAR (10) CONSTRAINT PK_CONTA PRIMARY KEY,
+ContaNumero VARCHAR (10) CONSTRAINT PK_Conta PRIMARY KEY,
 ClienteCodigo int,
 ContaSaldo MONEY,
 ContaAbertura datetime
@@ -103,7 +103,7 @@ CREATE TABLE Movimentos
 FilialCodigo INT,
 GrupoCodigo INT,
 AgenciaCodigo int,
-ContaNumero VARCHAR (10) CONSTRAINT PK_CONTA PRIMARY KEY,
+ContaNumero VARCHAR (10) CONSTRAINT PK_Movimentos PRIMARY KEY,
 ClienteCodigo int,
 CodigoMovimento int,
 MovimentoData DATETIME,
