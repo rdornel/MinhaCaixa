@@ -2,12 +2,12 @@ SET DATEFORMAT YMD
 GO
 USE master
 go
-IF EXISTS (SELECT * FROM SYS.databases WHERE NAME = 'MinhaCaixa')
-drop database MinhaCaixa
+IF EXISTS (SELECT * FROM SYS.databases WHERE NAME = 'MinhaCaixa_Beta')
+drop database MinhaCaixa_Beta
 go
-CREATE DATABASE MinhaCaixa
+CREATE DATABASE MinhaCaixa_Beta
 GO
-USE MinhaCaixa
+USE MinhaCaixa_Beta
 GO
 CREATE TABLE Grupo
 (
@@ -106,7 +106,7 @@ AgenciaCodigo int,
 ContaNumero VARCHAR (10) CONSTRAINT PK_CONTA PRIMARY KEY,
 ClienteCodigo int,
 CodigoMovimento int,
-MovimentoData datetime
+MovimentoData DATETIME,
 MovimentoValor MONEY,
 MovimentoTipo int
 )
