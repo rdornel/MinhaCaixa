@@ -3,6 +3,7 @@ GO
 USE master
 go
 IF EXISTS (SELECT * FROM SYS.databases WHERE NAME = 'MinhaCaixa_Beta')
+ALTER DATABASE MinhaCaixa_Beta SET SINGLE_USER WITH ROLLBACK IMMEDIATE
 drop database MinhaCaixa_Beta
 go
 CREATE DATABASE MinhaCaixa_Beta
@@ -16,17 +17,7 @@ GrupoNome VARCHAR(50),
 GrupoRazaoSocial VARCHAR(50),
 GrupoCNPJ varchar(20),
 )
-INSERT Grupo
-        (
-          GrupoNome ,
-          GrupoRazaoSocial ,
-          GrupoCNPJ
-        )
-VALUES  (
-          'Minha Caixa Finanças Pessoais',
-          'Minha Caixa SA' ,
-          '11.111.111/0001-11'
-        )
+GO
 CREATE TABLE Filial
 (
 GrupoCodigo INT,
@@ -35,23 +26,6 @@ FilialNome VARCHAR(50),
 FilialRazaoSocial VARCHAR(50),
 FilialCNPJ varchar(20),
 )
-INSERT dbo.Filial
-        (GrupoCodigo
-        ,FilialNome
-        ,FilialRazaoSocial
-        ,FilialCNPJ
-        )
-VALUES  (1,
-		 'Minha Caixa Serviços Bancários',
-          'Banco Minha Caixa' ,
-          '22.222.222/0001-22'
-        ),
-		(1,
-		 'Minha Caixa Cartões de Crédito',
-          'Cartões Minha Caixa' ,
-          '22.222.222/0001-22'
-        )
-GO
 CREATE table Clientes
 (
 ClienteCodigo int CONSTRAINT PK_CLIENTES PRIMARY KEY,
@@ -90,8 +64,6 @@ AgenciaPais VARCHAR(50)
 GO
 CREATE TABLE Contas
 (
-FilialCodigo INT,
-GrupoCodigo INT,
 AgenciaCodigo int,
 ContaNumero VARCHAR (10) CONSTRAINT PK_Conta PRIMARY KEY,
 ClienteCodigo int,
@@ -100,11 +72,7 @@ ContaAbertura datetime
 )
 CREATE TABLE Movimentos
 (
-FilialCodigo INT,
-GrupoCodigo INT,
-AgenciaCodigo int,
 ContaNumero VARCHAR (10) CONSTRAINT PK_Movimentos PRIMARY KEY,
-ClienteCodigo int,
 CodigoMovimento int,
 MovimentoData DATETIME,
 MovimentoValor MONEY,
