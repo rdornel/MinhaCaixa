@@ -72,9 +72,9 @@ ContaAbertura datetime
 )
 CREATE TABLE Movimentos
 (
-ContaNumero VARCHAR (10) CONSTRAINT PK_Movimentos PRIMARY KEY,
-CodigoMovimento int,
+ContaNumero VARCHAR (10),
 MovimentoData DATETIME,
 MovimentoValor MONEY,
-MovimentoTipo int
+MovimentoTipo INT,
+MovimentoCodigo int
 )
