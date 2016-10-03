@@ -67,8 +67,8 @@ CREATE TABLE Contas
 AgenciaCodigo int,
 ContaNumero VARCHAR (10) CONSTRAINT PK_Conta PRIMARY KEY,
 ClienteCodigo int,
-ContaSaldo MONEY,
-ContaAbertura datetime
+ContaAbertura DATETIME,
+ContaTipo int
 )
 CREATE TABLE Movimentos
 (
@@ -77,4 +77,9 @@ MovimentoData DATETIME,
 MovimentoValor MONEY,
 MovimentoTipo INT,
 MovimentoCodigo int
+)
+CREATE TABLE TipoContas
+(
+TipoContaCodigo INT CONSTRAINT PK_TipoContas PRIMARY KEY,
+TipoContaDescição VARCHAR (25)
 )
