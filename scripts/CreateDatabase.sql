@@ -4,7 +4,8 @@ USE master
 go
 IF EXISTS (SELECT * FROM SYS.databases WHERE NAME = 'MinhaCaixa_Beta')
 ALTER DATABASE MinhaCaixa_Beta SET SINGLE_USER WITH ROLLBACK IMMEDIATE
-drop database MinhaCaixa_Beta
+IF EXISTS (SELECT * FROM SYS.databases WHERE NAME = 'MinhaCaixa_Beta')
+DROP database MinhaCaixa_Beta
 go
 CREATE DATABASE MinhaCaixa_Beta
 GO
@@ -83,3 +84,19 @@ CREATE TABLE TipoContas
 TipoContaCodigo INT CONSTRAINT PK_TipoContas PRIMARY KEY,
 TipoContaDescição VARCHAR (25)
 )
+create table CartaoCredito
+(
+AgenciaCodigo INT,
+ContaNumero VARCHAR (10),
+ClienteCodigo int,
+CartaoCodigo varchar (20),
+CartaoLimite MONEY,
+CartaoExpira DATETIME,
+CartaoCodigoSeguranca int
+)
+INSERT dbo.CartaoCredito VALUES  (1,12,'1111-2222-3333-4444',1000)
+GO
+INSERT dbo.CartaoCredito VALUES  (4,13,'1234-4567-8910-1112',1000)
+GO
+INSERT dbo.CartaoCredito VALUES  (4,7,'2222-3333-4444-5555',2000)
+GO
