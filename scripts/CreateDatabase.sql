@@ -29,7 +29,7 @@ FilialCNPJ varchar(20),
 )
 CREATE table Clientes
 (
-ClienteCodigo int CONSTRAINT PK_CLIENTES PRIMARY KEY,
+ClienteCodigo int CONSTRAINT PK_CLIENTES PRIMARY KEY IDENTITY(1,1),
 ClienteCPF varchar (50),
 ClienteNome varchar (50),
 ClienteSobrenome varchar (50),
@@ -41,7 +41,7 @@ ClienteNumero INT,
 ClienteBairro VARCHAR(50),
 ClienteCEP VARCHAR(25),
 ClienteCidade VARCHAR(50),
-ClienteEstado CHAR(2),
+ClienteEstado CHAR(50),
 ClientePais VARCHAR(50),
 ClienteRendaAnual MONEY,
 ClienteTelefone VARCHAR(50),
