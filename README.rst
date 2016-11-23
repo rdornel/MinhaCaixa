@@ -1,7 +1,7 @@
 Minha Caixa 
 ===========
 
-.. image:: images/MinhaCaixaSmall.jpg
+.. image:: images/MinhaCaixa.png
    
 Projeto destinado ao ensino aprendizagem de banco de dados
 
