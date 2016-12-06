@@ -77,7 +77,7 @@ ContaNumero VARCHAR (10),
 MovimentoData DATETIME,
 MovimentoValor MONEY,
 MovimentoTipo INT,
-MovimentoCodigo int
+MovimentoCodigo INT IDENTITY 
 )
 CREATE TABLE TipoContas
 (
