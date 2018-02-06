@@ -2,14 +2,14 @@ SET DATEFORMAT YMD
 GO
 USE master
 go
-IF EXISTS (SELECT * FROM SYS.databases WHERE NAME = 'PowerBIDemo')
-ALTER DATABASE PowerBIDemo SET SINGLE_USER WITH ROLLBACK IMMEDIATE
-IF EXISTS (SELECT * FROM SYS.databases WHERE NAME = 'PowerBIDemo')
-DROP database PowerBIDemo
+IF EXISTS (SELECT * FROM SYS.databases WHERE NAME = 'MinhaCaixa')
+ALTER DATABASE MinhaCaixa SET SINGLE_USER WITH ROLLBACK IMMEDIATE
+IF EXISTS (SELECT * FROM SYS.databases WHERE NAME = 'MinhaCaixa')
+DROP database MinhaCaixa
 go
-CREATE DATABASE PowerBIDemo
+CREATE DATABASE MinhaCaixa
 GO
-USE PowerBIDemo
+USE MinhaCaixa
 GO
 CREATE TABLE Grupo
 (
@@ -4192,3 +4192,18 @@ INSERT dbo.CartaoCredito VALUES
 (1,'002107-8',50,'1001-2002-3003-4004',3500, '2020-10-10',724),
 (3,'031770-0',524,'7894-2002-3003-4004',3500, '2020-10-10',724)
 GO
+CREATE TABLE TipoMovimento
+(
+TipoMovimentoCodigo INT CONSTRAINT PK_TipoMovimento,
+TipoMovimentoDescricao VARCHAR(50)
+)
+GO
+INSERT TipoMovimento
+(-1,'Débito'),(1,'Crédito')
+GO
+CREATE TABLE TipoContaCorrente
+(
+TipoCorrenteCodigo INT IDENTITY CONSTRAINT PK_TipoContaCorrente,
+TipoContaCorrenteDescricao VARCHAR(50)
+)
+INSERT 
