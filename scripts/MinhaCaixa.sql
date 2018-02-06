@@ -1084,6 +1084,15 @@ ALTER TABLE dbo.Contas ADD CONSTRAINT FK_Agencia_Conta FOREIGN KEY (AgenciaCodig
 GO
 ALTER TABLE dbo.Contas ADD CONSTRAINT FK_Clientes_Conta FOREIGN KEY (ClienteCodigo) REFERENCES dbo.Clientes (ClienteCodigo)
 GO
+CREATE TABLE TipoMovimento
+(
+TipoMovimentoCodigo INT CONSTRAINT PK_TipoMovimento PRIMARY KEY,
+TipoMovimentoDescricao VARCHAR(50)
+)
+GO
+INSERT TipoMovimento VALUES
+(-1,'Débito'),(1,'Crédito')
+GO
 CREATE TABLE Movimentos
 (
 ContaNumero VARCHAR (10),
@@ -1093,6 +1102,8 @@ MovimentoTipo INT,
 MovimentoCodigo INT IDENTITY 
 )
 ALTER TABLE dbo.Movimentos ADD CONSTRAINT FK_Movimentos_Conta FOREIGN KEY (ContaNumero) REFERENCES dbo.Contas (ContaNumero)
+GO
+ALTER TABLE dbo.Movimentos ADD CONSTRAINT FK_Movimentos_Tipo FOREIGN KEY (MovimentoTipo) REFERENCES dbo.TipoMovimento (TipoMovimentoCodigo)
 GO
 CREATE TABLE TipoContas
 (
@@ -4192,18 +4203,3 @@ INSERT dbo.CartaoCredito VALUES
 (1,'002107-8',50,'1001-2002-3003-4004',3500, '2020-10-10',724),
 (3,'031770-0',524,'7894-2002-3003-4004',3500, '2020-10-10',724)
 GO
-CREATE TABLE TipoMovimento
-(
-TipoMovimentoCodigo INT CONSTRAINT PK_TipoMovimento,
-TipoMovimentoDescricao VARCHAR(50)
-)
-GO
-INSERT TipoMovimento
-(-1,'Débito'),(1,'Crédito')
-GO
-CREATE TABLE TipoContaCorrente
-(
-TipoCorrenteCodigo INT IDENTITY CONSTRAINT PK_TipoContaCorrente,
-TipoContaCorrenteDescricao VARCHAR(50)
-)
-INSERT 
