@@ -1108,13 +1108,13 @@ GO
 CREATE TABLE TipoContas
 (
 TipoContaCodigo INT CONSTRAINT PK_TipoContas PRIMARY KEY,
-TipoContaDesciçAo VARCHAR (25)
+TipoContaDescicao VARCHAR (25)
 )
 GO
 INSERT dbo.TipoContas
 (
     TipoContaCodigo,
-    TipoContaDesciçAo
+    TipoContaDescricao
 )
 VALUES
 (   1,
