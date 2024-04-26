@@ -18,7 +18,7 @@ namespace InsertDatabase
             InitializeComponent();
         }
 
-        SqlConnection sqlConn = new SqlConnection("server=192.168.0.0;Database=MinhaCaixa;User id=alunos;Password=pass@word1");
+        SqlConnection sqlConn = new SqlConnection("server=192.168.56.102;Database=MinhaCaixa;User id=alunos;Password=pass@word1");
         SqlCommand cmd;
 
         private void Form1_Load(object sender, EventArgs e)
@@ -38,14 +38,16 @@ namespace InsertDatabase
             sqlConn.Open();
             string nome_texto = textBox1.Text;
             string sexo_texto = textBox2.Text;
-            
-            SqlCommand cmd = new SqlCommand("INSERT dbo.Clientes (ClienteNome, ClienteSexo ) VALUES  ('" + nome_texto+"', '"+sexo_texto+"')", sqlConn);
+            string cpf_texto = textBox3.Text;
+            string sobrenome_texto = textBox4.Text;
+
+            SqlCommand cmd = new SqlCommand("INSERT dbo.Clientes (ClienteNome, ClienteSobrenome, ClienteCPF, ClienteSexo ) VALUES  ('" + nome_texto + "', '" + sobrenome_texto + "', '" + cpf_texto + "', '" + sexo_texto + "')", sqlConn);
             cmd.ExecuteNonQuery();
             
             //ver
             //https://msdn.microsoft.com/pt-br/library/system.data.sqlclient.sqlcommand.prepare%28v=vs.110%29.aspx?f=255&MSPPError=-2147217396 
              
-            MessageBox.Show("Inserido "+nome_texto+", "+sexo_texto.ToString());
+            MessageBox.Show("Inserido Novo Registro Nome: "+nome_texto + " Sobrenome: " + sobrenome_texto.ToString()+ " Sexo: " +sexo_texto.ToString());
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -54,6 +56,26 @@ namespace InsertDatabase
        }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
         {
 
         }

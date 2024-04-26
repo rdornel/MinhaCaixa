@@ -25,3 +25,13 @@ D:\Users\rodrigo\Desktop\InsertDatabase\InsertDatabase\obj\Debug\InsertDatabase.
 D:\Users\rodrigo\Desktop\InsertDatabase\InsertDatabase\obj\Debug\InsertDatabase.csproj.CoreCompileInputs.cache
 D:\Users\rodrigo\Desktop\InsertDatabase\InsertDatabase\obj\Debug\InsertDatabase.exe
 D:\Users\rodrigo\Desktop\InsertDatabase\InsertDatabase\obj\Debug\InsertDatabase.pdb
+C:\Users\RodrigoDornel\source\repos\InsertDatabase\InsertDatabase\bin\Debug\InsertDatabase.exe.config
+C:\Users\RodrigoDornel\source\repos\InsertDatabase\InsertDatabase\bin\Debug\InsertDatabase.exe
+C:\Users\RodrigoDornel\source\repos\InsertDatabase\InsertDatabase\bin\Debug\InsertDatabase.pdb
+C:\Users\RodrigoDornel\source\repos\InsertDatabase\InsertDatabase\obj\Debug\InsertDatabase.csproj.AssemblyReference.cache
+C:\Users\RodrigoDornel\source\repos\InsertDatabase\InsertDatabase\obj\Debug\InsertDatabase.Form1.resources
+C:\Users\RodrigoDornel\source\repos\InsertDatabase\InsertDatabase\obj\Debug\InsertDatabase.Properties.Resources.resources
+C:\Users\RodrigoDornel\source\repos\InsertDatabase\InsertDatabase\obj\Debug\InsertDatabase.csproj.GenerateResource.cache
+C:\Users\RodrigoDornel\source\repos\InsertDatabase\InsertDatabase\obj\Debug\InsertDatabase.csproj.CoreCompileInputs.cache
+C:\Users\RodrigoDornel\source\repos\InsertDatabase\InsertDatabase\obj\Debug\InsertDatabase.exe
+C:\Users\RodrigoDornel\source\repos\InsertDatabase\InsertDatabase\obj\Debug\InsertDatabase.pdb
