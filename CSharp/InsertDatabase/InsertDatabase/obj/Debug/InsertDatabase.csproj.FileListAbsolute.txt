@@ -1,0 +1,27 @@
+D:\VS13\VS13_Csharp\InsertDatabase\InsertDatabase\bin\Debug\InsertDatabase.exe.config
+D:\VS13\VS13_Csharp\InsertDatabase\InsertDatabase\bin\Debug\InsertDatabase.exe
+D:\VS13\VS13_Csharp\InsertDatabase\InsertDatabase\bin\Debug\InsertDatabase.pdb
+D:\VS13\VS13_Csharp\InsertDatabase\InsertDatabase\obj\Debug\InsertDatabase.csprojResolveAssemblyReference.cache
+D:\VS13\VS13_Csharp\InsertDatabase\InsertDatabase\obj\Debug\InsertDatabase.Form1.resources
+D:\VS13\VS13_Csharp\InsertDatabase\InsertDatabase\obj\Debug\InsertDatabase.Properties.Resources.resources
+D:\VS13\VS13_Csharp\InsertDatabase\InsertDatabase\obj\Debug\InsertDatabase.csproj.GenerateResource.Cache
+D:\VS13\VS13_Csharp\InsertDatabase\InsertDatabase\obj\Debug\InsertDatabase.exe
+D:\VS13\VS13_Csharp\InsertDatabase\InsertDatabase\obj\Debug\InsertDatabase.pdb
+D:\Documents\Visual Studio 2015\Projects\InsertDatabase\InsertDatabase\bin\Debug\InsertDatabase.exe.config
+D:\Documents\Visual Studio 2015\Projects\InsertDatabase\InsertDatabase\obj\Debug\InsertDatabase.exe
+D:\Documents\Visual Studio 2015\Projects\InsertDatabase\InsertDatabase\obj\Debug\InsertDatabase.pdb
+D:\Documents\Visual Studio 2015\Projects\InsertDatabase\InsertDatabase\bin\Debug\InsertDatabase.exe
+D:\Documents\Visual Studio 2015\Projects\InsertDatabase\InsertDatabase\bin\Debug\InsertDatabase.pdb
+D:\Documents\Visual Studio 2015\Projects\InsertDatabase\InsertDatabase\obj\Debug\InsertDatabase.csprojResolveAssemblyReference.cache
+D:\Documents\Visual Studio 2015\Projects\InsertDatabase\InsertDatabase\obj\Debug\InsertDatabase.Form1.resources
+D:\Documents\Visual Studio 2015\Projects\InsertDatabase\InsertDatabase\obj\Debug\InsertDatabase.Properties.Resources.resources
+D:\Documents\Visual Studio 2015\Projects\InsertDatabase\InsertDatabase\obj\Debug\InsertDatabase.csproj.GenerateResource.Cache
+D:\Users\rodrigo\Desktop\InsertDatabase\InsertDatabase\bin\Debug\InsertDatabase.exe.config
+D:\Users\rodrigo\Desktop\InsertDatabase\InsertDatabase\bin\Debug\InsertDatabase.exe
+D:\Users\rodrigo\Desktop\InsertDatabase\InsertDatabase\bin\Debug\InsertDatabase.pdb
+D:\Users\rodrigo\Desktop\InsertDatabase\InsertDatabase\obj\Debug\InsertDatabase.Form1.resources
+D:\Users\rodrigo\Desktop\InsertDatabase\InsertDatabase\obj\Debug\InsertDatabase.Properties.Resources.resources
+D:\Users\rodrigo\Desktop\InsertDatabase\InsertDatabase\obj\Debug\InsertDatabase.csproj.GenerateResource.cache
+D:\Users\rodrigo\Desktop\InsertDatabase\InsertDatabase\obj\Debug\InsertDatabase.csproj.CoreCompileInputs.cache
+D:\Users\rodrigo\Desktop\InsertDatabase\InsertDatabase\obj\Debug\InsertDatabase.exe
+D:\Users\rodrigo\Desktop\InsertDatabase\InsertDatabase\obj\Debug\InsertDatabase.pdb
