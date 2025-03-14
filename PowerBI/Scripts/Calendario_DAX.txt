@@ -1,1 +1,12 @@
-
+Dates  = 
+  GENERATE ( 
+    CALENDAR ( DATE ( 2021, 1, 1 ), DATE ( 2021, 12, 31 ) ), 
+    VAR currentDay = [Date]
+    VAR day = DAY( currentDay )
+    VAR month =  MONTH ( currentDay ) 
+    VAR year =  YEAR ( currentDay )
+  RETURN   ROW ( 
+    "day", day, 
+    "month", month, 
+    "year", year )
+  )
