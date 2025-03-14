@@ -1,0 +1,18 @@
+let
+    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i45WMjDUByIjAwMDpdhYAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [StartDate = _t]),
+    #"Added Custom" = Table.AddColumn(Source, "EndDate", each Date.From(DateTime.LocalNow())),
+    #"Changed Type2" = Table.TransformColumnTypes(#"Added Custom",{{"EndDate", type date}}),
+    #"Changed Type" = Table.TransformColumnTypes(#"Changed Type2",{{"StartDate", type date}}),
+    #"Added Custom1" = Table.AddColumn(#"Changed Type", "Dates", each {Number.From([StartDate])..Number.From([EndDate])}),
+    #"Expanded Dates" = Table.ExpandListColumn(#"Added Custom1", "Dates"),
+    #"Changed Type1" = Table.TransformColumnTypes(#"Expanded Dates",{{"Dates", type date}}),
+    #"Removed Columns1" = Table.RemoveColumns(#"Changed Type1",{"StartDate", "EndDate"}),
+    #"Added Custom2" = Table.AddColumn(#"Removed Columns1", "Year", each Date.Year([Dates])),
+    #"Added Custom3" = Table.AddColumn(#"Added Custom2", "Month", each Date.Month([Dates])),
+    #"Added Custom4" = Table.AddColumn(#"Added Custom3", "MonthName", each Date.MonthName([Dates])),
+    #"Added Custom5" = Table.AddColumn(#"Added Custom4", "ShortMonthName", each Text.Start([MonthName],3)),
+    #"Added Custom6" = Table.AddColumn(#"Added Custom5", "Quarter", each Date.QuarterOfYear([Dates])),
+    #"Changed Type3" = Table.TransformColumnTypes(#"Added Custom6",{{"Quarter", type text}}),
+    #"Added Custom7" = Table.AddColumn(#"Changed Type3", "QtrText", each "Qtr "& [Quarter])
+in
+    #"Added Custom7"
