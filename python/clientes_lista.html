@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% block titulo %}Clientes - MinhaCaixa{% endblock %}
+
+{% block conteudo %}
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <h4 class="mb-0">Clientes</h4>
+    <a href="{{ url_for('clientes_novo') }}" class="btn btn-primary">+ Novo Cliente</a>
+</div>
+
+<div class="card mb-3">
+    <div class="card-body">
+        <form class="row g-2" method="get" action="{{ url_for('clientes_listar') }}">
+            <div class="col-auto flex-grow-1">
+                <input type="text" name="q" class="form-control"
+                       placeholder="Buscar por código, nome, sobrenome ou CPF"
+                       value="{{ termo }}">
+            </div>
+            <div class="col-auto">
+                <button type="submit" class="btn btn-outline-secondary">Buscar</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="card">
+    <div class="table-responsive">
+        <table class="table table-hover mb-0 align-middle">
+            <thead class="table-light">
+                <tr>
+                    <th>Código</th>
+                    <th>CPF</th>
+                    <th>Nome</th>
+                    <th>Sobrenome</th>
+                    <th>Cidade</th>
+                    <th>Telefone</th>
+                    <th>E-mail</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for c in clientes %}
+                <tr>
+                    <td>{{ c[0] }}</td>
+                    <td>{{ c[1] }}</td>
+                    <td>{{ c[2] }}</td>
+                    <td>{{ c[3] }}</td>
+                    <td>{{ c[4] }}</td>
+                    <td>{{ c[5] }}</td>
+                    <td>{{ c[6] }}</td>
+                    <td class="text-end">
+                        <a href="{{ url_for('clientes_editar', codigo=c[0]) }}"
+                           class="btn btn-sm btn-outline-primary">Editar</a>
+                    </td>
+                </tr>
+                {% else %}
+                <tr>
+                    <td colspan="8" class="text-center text-muted py-4">
+                        Nenhum cliente encontrado.
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

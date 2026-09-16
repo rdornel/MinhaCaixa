@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block titulo %}{{ titulo }} - MinhaCaixa{% endblock %}
+
+{% block conteudo %}
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <h4 class="mb-0">{{ titulo }}</h4>
+    <a href="{{ url_for('clientes_listar') }}" class="btn btn-outline-secondary">&larr; Voltar</a>
+</div>
+
+<div class="card">
+    <div class="card-body">
+        <form method="post">
+            <div class="row">
+                {% for campo, rotulo in campos %}
+                <div class="col-md-4 mb-3">
+                    <label class="form-label" for="{{ campo }}">{{ rotulo }}</label>
+
+                    {% if campo == "ClienteNascimento" %}
+                        <input type="date" class="form-control" id="{{ campo }}" name="{{ campo }}"
+                               value="{{ cliente[campo] if cliente else '' }}">
+                    {% elif campo == "ClienteEmail" %}
+                        <input type="email" class="form-control" id="{{ campo }}" name="{{ campo }}"
+                               value="{{ cliente[campo] if cliente else '' }}">
+                    {% elif campo in ("ClienteNumero",) %}
+                        <input type="number" class="form-control" id="{{ campo }}" name="{{ campo }}"
+                               value="{{ cliente[campo] if cliente else '' }}">
+                    {% elif campo == "ClienteRendaAnual" %}
+                        <input type="number" step="0.01" class="form-control" id="{{ campo }}" name="{{ campo }}"
+                               value="{{ cliente[campo] if cliente else '' }}">
+                    {% elif campo == "ClienteSexo" %}
+                        <select class="form-select" id="{{ campo }}" name="{{ campo }}">
+                            <option value="">-</option>
+                            <option value="M" {% if cliente and cliente[campo] == "M" %}selected{% endif %}>Masculino</option>
+                            <option value="F" {% if cliente and cliente[campo] == "F" %}selected{% endif %}>Feminino</option>
+                        </select>
+                    {% elif campo == "ClienteEstadoCivil" %}
+                        <select class="form-select" id="{{ campo }}" name="{{ campo }}">
+                            <option value="">-</option>
+                            <option value="S" {% if cliente and cliente[campo] == "S" %}selected{% endif %}>Solteiro(a)</option>
+                            <option value="C" {% if cliente and cliente[campo] == "C" %}selected{% endif %}>Casado(a)</option>
+                        </select>
+                    {% else %}
+                        <input type="text" class="form-control" id="{{ campo }}" name="{{ campo }}"
+                               value="{{ cliente[campo] if cliente else '' }}">
+                    {% endif %}
+                </div>
+                {% endfor %}
+            </div>
+
+            <button type="submit" class="btn btn-primary">Salvar</button>
+            <a href="{{ url_for('clientes_listar') }}" class="btn btn-link">Cancelar</a>
+        </form>
+    </div>
+</div>
+{% endblock %}
