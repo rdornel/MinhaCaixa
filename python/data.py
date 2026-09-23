@@ -63,7 +63,7 @@ def cliente_buscar(termo: str):
            OR ClienteSobrenome LIKE ?
            OR ClienteCPF LIKE ?
            OR ClienteEmail LIKE ?
-           OR C
+           OR ClienteCidade LIKE ?
         ORDER BY ClienteCodigo
     """
     like = f"%{termo}%"
