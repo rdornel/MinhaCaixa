@@ -62,12 +62,13 @@ def cliente_buscar(termo: str):
            OR ClienteNome LIKE ?
            OR ClienteSobrenome LIKE ?
            OR ClienteCPF LIKE ?
+           OR ClienteEmail LIKE ?
         ORDER BY ClienteCodigo
     """
     like = f"%{termo}%"
     with get_connection() as conn:
         cur = conn.cursor()
-        cur.execute(sql, [termo, like, like, like])
+        cur.execute(sql, [termo, like, like, like, like])
         return cur.fetchall()
 
 
